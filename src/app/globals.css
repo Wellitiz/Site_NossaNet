@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #10b981; /* Emerald 500 - Verde vibrante */
+  --color-primary-dark: #047857; /* Emerald 700 */
+  --color-nossa-black: #09090b; /* Preto Profundo */
+  --color-nossa-gray: #f4f4f5; /* Cinza claro anti-reflexo */
+  --color-nossa-darkgray: #27272a; /* Cinza escuro para detalhes */
+  
+  --font-sans: 'Inter', sans-serif;
+  
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-nossa-gray);
+  }
+  body {
+    background-color: #ffffff;
+    color: var(--color-nossa-black);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
