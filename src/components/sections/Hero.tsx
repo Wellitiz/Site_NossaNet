@@ -3,10 +3,14 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Zap, Shield, Clock, ArrowRight, Signal } from 'lucide-react';
 import { NeuralNetworkBackground } from '@/components/ui/NeuralNetwork';
+import { InteractiveFiber } from '@/components/ui/InteractiveFiber';
 
 export function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-nossa-black pt-28 pb-40 md:pt-40 md:pb-56">
+      {/* 3D Interactive Fiber Cable */}
+      <InteractiveFiber />
+
       {/* Neural Network Background Effect */}
       <NeuralNetworkBackground />
 

@@ -1,6 +1,7 @@
 'use client';
-import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { DigitalWaves } from '@/components/ui/DigitalWaves';
 
 export function ParallaxSection() {
   const ref = useRef(null);
@@ -16,6 +17,9 @@ export function ParallaxSection() {
       ref={ref}
       className="w-full h-[60vh] md:h-[80vh] flex items-center justify-center relative overflow-hidden bg-nossa-black"
     >
+      {/* 3D Digital Waves */}
+      <DigitalWaves />
+
       {/* Fixed Background Image */}
       <div 
         className="absolute inset-0 w-full h-full bg-center bg-cover bg-fixed opacity-50"
