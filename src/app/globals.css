@@ -1,28 +1,63 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #10b981; /* Emerald 500 - Verde vibrante */
-  --color-primary-dark: #047857; /* Emerald 700 */
-  --color-nossa-black: #09090b; /* Preto Profundo */
-  --color-nossa-gray: #f4f4f5; /* Cinza claro anti-reflexo */
-  --color-nossa-darkgray: #27272a; /* Cinza escuro para detalhes */
+  --color-primary: #89f336; /* Verde Limão vibrante */
+  --color-primary-dark: #66cc00; /* Darker Lime */
+  --color-primary-light: #affc6f; /* Lighter Lime */
+  --color-nossa-black: #080a0c; /* Deep slate black */
+  --color-nossa-gray: #f8fafc; /* Standard gray */
+  --color-nossa-darkgray: #1a1d21; /* Modern dark gray */
   
   --font-sans: 'Inter', sans-serif;
   
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-3xl: 2rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3rem;
+  --radius-full: 9999px;
+
+  --shadow-premium: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0 0 20px rgba(34, 197, 94, 0.2);
 }
 
 @layer base {
   * {
-    border-color: var(--color-nossa-gray);
+    border-color: #e2e8f0;
   }
   body {
     background-color: #ffffff;
     color: var(--color-nossa-black);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
   }
 }
+
+@layer utilities {
+  .bg-glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  .bg-glass-dark {
+    @apply bg-nossa-darkgray/80 backdrop-blur-lg border border-white/10;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-nossa-black to-zinc-600;
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.5); }
+}
+

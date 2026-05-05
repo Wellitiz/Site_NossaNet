@@ -1,0 +1,30 @@
+O cliente apresentou diversas críticas e sugestões específicas sobre o desenvolvimento do site, focando em identidade visual, usabilidade móvel e estrutura de navegação.
+
+Identidade Visual e Design
+O layout precisa ser mais moderno, incorporando o uso de curvas e linhas contemporâneas.
+
+As cores padrão da empresa são verde, branco, preto e cinza.
+
+O cliente mencionou que o site atual parece "pálido" e "assustado" em comparação com as cores vibrantes que esperava.
+
+Há uma solicitação específica para remover o logotipo com a letra "N" que aparece junto ao nome da empresa no topo da página.
+
+Faltam movimentos e animações nos planos apresentados.
+
+O design deve evitar o aspecto "rústico" observado em sites de concorrentes.
+
+Experiência do Usuário (UX) e Mobile
+O cliente relatou um grande desconforto visual ao abrir o site no smartphone, descrevendo a experiência como "ofuscante", semelhante a olhar diretamente para o sol.
+
+Esse problema de excesso de brilho ou "estridência" no celular é atribuído ao gradiente preto posicionado à esquerda, que não se ajusta bem à tela menor.
+
+Embora a visualização no computador pareça adequada, o cliente enfatiza que 95% dos usuários acessarão pelo celular, exigindo prioridade total na adaptação para dispositivos móveis.
+
+Estrutura e Funcionalidade
+Navegação: É necessária a inclusão de um botão para a Central do Assinante no canto superior direito do site.
+
+Extensão da Página: O site está excessivamente longo, exigindo que o usuário role a tela cerca de dez vezes para alcançar o rodapé.
+
+Objetividade: O cliente busca uma estrutura mais simples, clara e objetiva, sem informações desnecessárias que aumentem o comprimento da página.
+
+Referências: Ele solicitou o envio de artes de projetos anteriores (como o do escritório) e exemplos de outros sites já produzidos para servir de guia.
