@@ -1,7 +1,12 @@
 'use client';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { DigitalWaves } from '@/components/ui/DigitalWaves';
+import dynamic from 'next/dynamic';
+
+const NeuralNetworkBackground = dynamic(() => import('@/components/ui/NeuralNetwork').then(mod => mod.NeuralNetworkBackground), {
+  ssr: false,
+  loading: () => null
+});
 
 export function ParallaxSection() {
   const ref = useRef(null);
@@ -17,9 +22,6 @@ export function ParallaxSection() {
       ref={ref}
       className="w-full h-[60vh] md:h-[80vh] flex items-center justify-center relative overflow-hidden bg-nossa-black"
     >
-      {/* 3D Digital Waves */}
-      <DigitalWaves />
-
       {/* Fixed Background Image */}
       <div 
         className="absolute inset-0 w-full h-full bg-center bg-cover bg-fixed opacity-50"
@@ -29,6 +31,11 @@ export function ParallaxSection() {
       {/* Dynamic Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-nossa-black via-transparent to-nossa-black backdrop-blur-[2px]"></div>
       <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+
+      {/* Neural Network Background - Moved to front */}
+      <div className="absolute inset-0 z-0 opacity-50 mix-blend-screen">
+        <NeuralNetworkBackground />
+      </div>
       
       <div className="relative z-10 text-center px-4 w-full h-full flex flex-col items-center justify-center pointer-events-none">
         <motion.div

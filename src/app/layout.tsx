@@ -10,6 +10,23 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 export const metadata: Metadata = {
   title: "NossaNeT Fortaleza | A Internet Certa Para Você",
   description: "A única empresa de Fortaleza que manda um especialista até a sua residência ou empresa para averiguar qual plano de internet se encaixa melhor a sua necessidade.",
+  keywords: ["internet", "fibra óptica", "fortaleza", "nossanet", "banda larga", "internet rápida"],
+  authors: [{ name: "NossaNet Fortaleza" }],
+  openGraph: {
+    title: "NossaNeT Fortaleza | A Internet Certa Para Você",
+    description: "Conecte-se com a melhor internet 100% Fibra Óptica de Fortaleza.",
+    url: "https://nossanet.com.br", // Subistituir pelo domínio real
+    siteName: "NossaNet Fortaleza",
+    images: [
+      {
+        url: "/images/hero-premium.png", // Imagem usada ao compartilhar no WhatsApp/Facebook
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.ico",
   },

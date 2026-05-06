@@ -2,17 +2,20 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Zap, Shield, Clock, ArrowRight, Signal } from 'lucide-react';
-import { NeuralNetworkBackground } from '@/components/ui/NeuralNetwork';
-import { InteractiveFiber } from '@/components/ui/InteractiveFiber';
+import dynamic from 'next/dynamic';
+
+const DigitalWaves = dynamic(() => import('@/components/ui/DigitalWaves').then(mod => mod.DigitalWaves), {
+  ssr: false,
+  loading: () => <div className="absolute inset-0 bg-nossa-black" />
+});
 
 export function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-nossa-black pt-28 pb-40 md:pt-40 md:pb-56">
-      {/* 3D Interactive Fiber Cable */}
-      <InteractiveFiber />
-
-      {/* Neural Network Background Effect */}
-      <NeuralNetworkBackground />
+      {/* 3D Digital Waves Effect */}
+      <div className="absolute inset-0 z-0">
+        <DigitalWaves />
+      </div>
 
       {/* Modern Glow Effects */}
       <div className="absolute top-0 -left-20 w-[600px] h-[600px] bg-primary/20 blur-[140px] rounded-full"></div>
