@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Cpu, Globe, Headphones, ShieldCheck, Zap, Activity } from 'lucide-react';
 
 const features = [
@@ -47,7 +47,7 @@ export function Features() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
           <div className="max-w-2xl">
-            <motion.h2 
+            <m.h2 
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -55,21 +55,21 @@ export function Features() {
             >
               Tecnologia que <br />
               <span className="text-primary">faz a diferença.</span>
-            </motion.h2>
+            </m.h2>
           </div>
-          <motion.p 
+          <m.p 
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="text-xl text-zinc-500 font-medium max-w-sm"
           >
             Não vendemos apenas megas, entregamos uma experiência digital completa e sem estresse.
-          </motion.p>
+          </m.p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <m.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -98,7 +98,7 @@ export function Features() {
               <div className="mt-8 flex items-center gap-2 text-primary font-bold text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
                 Saiba Mais <div className="w-10 h-px bg-primary"></div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

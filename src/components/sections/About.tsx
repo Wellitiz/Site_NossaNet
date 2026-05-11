@@ -33,7 +33,7 @@ export function About() {
                   <Award size={24} />
                 </div>
                 <div>
-                  <h4 className="font-black text-nossa-black">Excelência</h4>
+                  <h3 className="font-black text-nossa-black">Excelência</h3>
                   <p className="text-sm text-zinc-400">Qualidade premiada por 3 anos consecutivos.</p>
                 </div>
               </div>
@@ -64,7 +64,7 @@ export function About() {
           >
             <div className="relative h-[500px] md:h-[600px] rounded-[4rem] overflow-hidden shadow-2xl border-[8px] border-zinc-50">
                <Image 
-                  src="/images/history.png" 
+                  src="/images/history.webp" 
                   alt="Equipe NossaNeT Fortaleza" 
                   fill 
                   className="object-cover"

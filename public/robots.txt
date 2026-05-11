@@ -1,0 +1,9 @@
+# robots.txt for NossaNet Fortaleza
+User-agent: *
+Allow: /
+
+# Especial para o Googlebot
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://nossanetfortaleza.com.br/sitemap.xml

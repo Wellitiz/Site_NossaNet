@@ -1,5 +1,5 @@
 'use client';
-import { motion, useInView, useMotionValue, useSpring } from 'framer-motion';
+import { m, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
 function Counter({ value }: { value: number }) {
@@ -50,7 +50,7 @@ export function Stats() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {stats.map((stat, i) => (
-            <motion.div
+            <m.div
               key={stat.label}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export function Stats() {
               <p className="text-zinc-400 font-bold uppercase tracking-widest text-sm">
                 {stat.label}
               </p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
       </div>

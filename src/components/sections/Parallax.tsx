@@ -2,6 +2,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const NeuralNetworkBackground = dynamic(() => import('@/components/ui/NeuralNetwork').then(mod => mod.NeuralNetworkBackground), {
   ssr: false,
@@ -22,11 +23,14 @@ export function ParallaxSection() {
       ref={ref}
       className="w-full h-[60vh] md:h-[80vh] flex items-center justify-center relative overflow-hidden bg-nossa-black"
     >
-      {/* Fixed Background Image */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-center bg-cover bg-fixed opacity-50"
-        style={{ backgroundImage: "url('/images/parallax-modern.png')" }}
-      ></div>
+      {/* Optimized Background Image */}
+      <Image
+        src="/images/parallax-modern.webp"
+        alt="Estabilidade real de rede"
+        fill
+        className="object-cover opacity-50"
+        sizes="100vw"
+      />
       
       {/* Dynamic Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-nossa-black via-transparent to-nossa-black backdrop-blur-[2px]"></div>
@@ -43,9 +47,9 @@ export function ParallaxSection() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-5xl md:text-7xl lg:text-9xl font-black text-white drop-shadow-2xl tracking-tighter">
+          <h2 className="text-5xl md:text-7xl lg:text-9xl font-black text-white drop-shadow-2xl tracking-tighter">
             ESTABILIDADE <span className="text-primary italic">REAL</span>
-          </h3>
+          </h2>
           <p className="mt-8 text-zinc-100 text-xl md:text-3xl font-bold tracking-widest uppercase opacity-80">
              100% FIBRA ÓPTICA EM TODA FORTALEZA
           </p>

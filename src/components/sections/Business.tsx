@@ -51,7 +51,7 @@ export function Business() {
                 <div className="bg-primary/20 w-14 h-14 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                   <adv.icon size={28} />
                 </div>
-                <h4 className="text-xl font-black text-white mb-2">{adv.title}</h4>
+                <h3 className="text-xl font-black text-white mb-2">{adv.title}</h3>
                 <p className="text-sm text-zinc-500 font-medium">{adv.desc}</p>
               </motion.div>
             ))}

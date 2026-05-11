@@ -21,20 +21,21 @@ export function Header() {
         <div className="bg-white/70 backdrop-blur-2xl border border-white/20 shadow-premium rounded-3xl h-20 md:h-24 px-6 md:px-10 flex items-center justify-between relative z-50">
           
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="flex flex-col leading-none">
-              <span className="text-primary font-black text-2xl md:text-4xl tracking-tighter group-hover:scale-105 transition-transform">NossaNeT</span>
-              <span className="text-nossa-black font-black text-[10px] md:text-xs uppercase tracking-[0.3em] ml-1 opacity-60">Fortaleza</span>
-            </div>
+                <div className="flex flex-col">
+                  <span className="text-primary font-black text-2xl md:text-4xl tracking-tighter leading-none">NossaNeT</span>
+                  <span className="text-nossa-black font-black text-[10px] md:text-xs uppercase tracking-[0.3em] ml-2">FORTALEZA</span>
+                </div>
           </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-10">
             {navItems.map((item) => (
-              <Link 
-                key={item.name} 
-                href={item.href}
-                className="text-nossa-black font-bold text-sm uppercase tracking-widest hover:text-primary transition-colors relative group"
-              >
+                <Link 
+                  key={item.name} 
+                  href={item.href} 
+                  aria-label={`Ir para a seção ${item.name}`}
+                  className="text-nossa-black font-bold text-sm uppercase tracking-widest hover:text-primary transition-all relative group/link"
+                >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
               </Link>

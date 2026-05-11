@@ -1,10 +1,12 @@
 import { Hero } from "@/components/sections/Hero";
-import { Pricing } from "@/components/sections/Pricing";
-import { Features } from "@/components/sections/Features";
-import { Stats } from "@/components/sections/Stats";
-import { ParallaxSection } from "@/components/sections/Parallax";
-import { Business } from "@/components/sections/Business";
-import { About } from "@/components/sections/About";
+import dynamic from 'next/dynamic';
+
+const Stats = dynamic(() => import("@/components/sections/Stats").then(mod => mod.Stats));
+const Pricing = dynamic(() => import("@/components/sections/Pricing").then(mod => mod.Pricing));
+const Features = dynamic(() => import("@/components/sections/Features").then(mod => mod.Features));
+const ParallaxSection = dynamic(() => import("@/components/sections/Parallax").then(mod => mod.ParallaxSection));
+const Business = dynamic(() => import("@/components/sections/Business").then(mod => mod.Business));
+const About = dynamic(() => import("@/components/sections/About").then(mod => mod.About));
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 'use client';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Check, Info, Rocket, Monitor, Gamepad2, Wifi } from 'lucide-react';
 
 const plans = [
@@ -37,7 +37,7 @@ export function Pricing() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">
-          <motion.div
+          <m.div
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -45,21 +45,21 @@ export function Pricing() {
           >
             <Rocket size={14} className="text-primary" />
             <span>Nossos Planos em Fortaleza</span>
-          </motion.div>
-          <motion.h2 
+          </m.div>
+          <m.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-black tracking-tight text-nossa-black mb-6"
           >
             Internet que <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-dark">voa baixo.</span>
-          </motion.h2>
+          </m.h2>
           <p className="text-zinc-500 text-xl font-medium max-w-2xl mx-auto">Escolha a velocidade ideal para o seu estilo de vida digital.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
           {plans.map((plan, index) => (
-            <motion.div 
+            <m.div 
               key={plan.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -77,7 +77,7 @@ export function Pricing() {
                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] px-6 py-2 rounded-full shadow-lg">Campeão de Vendas</div>
               )}
 
-              <motion.div 
+              <m.div 
                 whileHover={{ backgroundColor: "var(--color-primary)" }}
                 transition={{ duration: 0 }}
                 className="bg-white rounded-[2.2rem] p-8 md:p-10 flex-1 flex flex-col"
@@ -124,8 +124,8 @@ export function Pricing() {
                     <span className="relative z-10">Contratar Plano</span>
                   </a>
                 </div>
-              </motion.div>
-            </motion.div>
+              </m.div>
+            </m.div>
           ))}
         </div>
         
