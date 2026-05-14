@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 
-const NeuralNetworkBackground = dynamic(() => import('@/components/ui/NeuralNetwork').then(mod => mod.NeuralNetworkBackground), {
+const DigitalWaves = dynamic(() => import('@/components/ui/DigitalWaves').then(mod => mod.DigitalWaves), {
   ssr: false,
   loading: () => null
 });
@@ -36,9 +36,9 @@ export function ParallaxSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-nossa-black via-transparent to-nossa-black backdrop-blur-[2px]"></div>
       <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
 
-      {/* Neural Network Background - Moved to front */}
-      <div className="absolute inset-0 z-0 opacity-50 mix-blend-screen">
-        <NeuralNetworkBackground />
+      {/* Digital Waves Background - Replacing Neural Network */}
+      <div className="absolute inset-0 z-0 opacity-40 mix-blend-screen">
+        <DigitalWaves />
       </div>
       
       <div className="relative z-10 text-center px-4 w-full h-full flex flex-col items-center justify-center pointer-events-none">

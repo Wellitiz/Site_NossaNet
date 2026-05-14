@@ -1,6 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import { HeadphonesIcon, WifiIcon, SignalHighIcon, CalendarDaysIcon, Briefcase, ChevronRight } from 'lucide-react';
+
+const DigitalWaves = dynamic(() => import('@/components/ui/DigitalWaves').then(mod => mod.DigitalWaves), {
+  ssr: false,
+  loading: () => null
+});
 
 export function Business() {
   const advantages = [
@@ -13,7 +19,8 @@ export function Business() {
   return (
     <section id="empresas" className="py-32 bg-nossa-black text-white relative overflow-hidden">
       {/* Decorative patterns */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <DigitalWaves />
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/20 blur-[150px] rounded-full"></div>
         <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-dark/10 blur-[120px] rounded-full"></div>
       </div>
